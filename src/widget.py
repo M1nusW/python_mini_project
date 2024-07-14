@@ -32,7 +32,7 @@ def mask_account_cart(type_and_number_cart: str) -> str:
 
 
 def get_data(raw_date: str) -> str:
-    """Функция, которая принимает данные о датеи прочего, и выводит только дату"""
+    """Функция, которая принимает данные о дате и прочего, и выводит только дату"""
     slice_date = raw_date[:10]
     date_clear = ""
     for one_symbol in range(len(slice_date)):
@@ -44,8 +44,3 @@ def get_data(raw_date: str) -> str:
     split_date = date_clear_split[::-1]
     final_result = ".".join(split_date)
     return final_result
-
-
-if __name__ == "__main__":
-    print(mask_account_cart)
-    print(get_data(date))
